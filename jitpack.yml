@@ -1,0 +1,4 @@
+# JitPack build config. The client targets Java 8 bytecode but builds fine on a newer
+# JDK; pin one so JitPack's environment is deterministic.
+jdk:
+  - openjdk11
