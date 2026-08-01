@@ -2,7 +2,7 @@
 
 A tiny (~21 KB), dependency-free metrics client you shade into your Minecraft plugin.
 It anonymously reports server/player counts and environment info to ArrowStats
-(https://stats.arrowtan.cc) every 30 minutes, off the main thread, and never throws
+(https://arrowstats.org) every 30 minutes, off the main thread, and never throws
 into your plugin.
 
 Supports **Bukkit / Spigot / Paper** today. BungeeCord and Velocity slot in later via
@@ -32,7 +32,7 @@ The demo plugin is ID `1`. You pass this ID to the client — never a name.
 <dependency>
     <groupId>com.github.GreenArrowlol</groupId>
     <artifactId>arrowstats-metrics</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
@@ -43,7 +43,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.GreenArrowlol:arrowstats-metrics:1.0.0'
+    implementation 'com.github.GreenArrowlol:arrowstats-metrics:1.0.1'
 }
 ```
 
@@ -103,7 +103,7 @@ public void onEnable() {
 }
 ```
 
-Submissions go to **https://stats.arrowtan.cc** by default. To point somewhere else
+Submissions go to **https://arrowstats.org** by default. To point somewhere else
 (local development, or your own ArrowStats deployment), pass a URL:
 
 ```java

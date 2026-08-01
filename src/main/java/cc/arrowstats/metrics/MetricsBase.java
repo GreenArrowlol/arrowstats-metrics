@@ -28,7 +28,7 @@ import java.util.function.Supplier;
  */
 public class MetricsBase {
 
-    public static final String METRICS_VERSION = "1.0.0";
+    public static final String METRICS_VERSION = "1.0.1";
 
     private static final long SUBMIT_INTERVAL_MS = TimeUnit.MINUTES.toMillis(30);
 

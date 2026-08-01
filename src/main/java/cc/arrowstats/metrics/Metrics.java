@@ -31,7 +31,7 @@ public class Metrics {
      * to the three-arg constructor (e.g. "http://localhost:8020/api/v1/ingest" for local
      * development, or your own ArrowStats deployment).
      */
-    private static final String DEFAULT_SUBMIT_URL = "https://stats.arrowtan.cc/api/v1/ingest";
+    private static final String DEFAULT_SUBMIT_URL = "https://arrowstats.org/api/v1/ingest";
 
     private final JavaPlugin plugin;
     private final MetricsBase metricsBase;
