@@ -81,7 +81,7 @@ always `cc.arrowstats.metrics`, regardless of the JitPack groupId.)
 </plugin>
 ```
 
-**Gradle Shadow**
+**Gradle Shadow** (Groovy, `build.gradle`)
 ```groovy
 plugins {
     id 'com.gradleup.shadow' version '8.3.0'
@@ -90,6 +90,20 @@ plugins {
 shadowJar {
     // change to YOUR plugin's package
     relocate 'cc.arrowstats.metrics', 'com.example.myplugin.metrics'
+}
+```
+
+**Gradle Shadow** (Kotlin DSL, `build.gradle.kts`) — configure the task via `tasks.shadowJar { }`
+with parentheses and double quotes. A bare top-level `shadowJar { }` or Groovy single quotes will
+not compile in a `.kts` file.
+```kotlin
+plugins {
+    id("com.gradleup.shadow") version "8.3.0"
+}
+
+tasks.shadowJar {
+    // change to YOUR plugin's package
+    relocate("cc.arrowstats.metrics", "com.example.myplugin.metrics")
 }
 ```
 
