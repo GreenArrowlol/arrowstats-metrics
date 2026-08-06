@@ -1,4 +1,4 @@
-# ArrowStats Metrics — client integration
+# ArrowStats Metrics - client integration
 
 A tiny (~21 KB), dependency-free metrics client you shade into your Minecraft plugin.
 It anonymously reports server/player counts and environment info to ArrowStats
@@ -8,7 +8,7 @@ into your plugin.
 Supports **Bukkit / Spigot / Paper** today. BungeeCord and Velocity slot in later via
 the platform-neutral `MetricsBase` core (no rewrite needed).
 
-> **Licensed under the MIT License** — free to use in any plugin, including closed-source
+> **Licensed under the MIT License** - free to use in any plugin, including closed-source
 > and paid ones. Just keep the license notice.
 
 ---
@@ -16,7 +16,7 @@ the platform-neutral `MetricsBase` core (no rewrite needed).
 ## 1. Get your plugin ID
 
 Every plugin is identified by a **numeric ID** (created in the ArrowStats admin area).
-The demo plugin is ID `1`. You pass this ID to the client — never a name.
+The demo plugin is ID `1`. You pass this ID to the client - never a name.
 
 ## 2. Add the dependency (via JitPack)
 
@@ -48,7 +48,7 @@ dependencies {
 ```
 
 > Prefer no build-tool dependency? Copy the `cc/arrowstats/metrics/*.java` files
-> straight into your project under **your own package** and skip to step 4 — no
+> straight into your project under **your own package** and skip to step 4 - no
 > relocation needed because they already live in your namespace.
 
 ## 3. Relocate the package (required when using the dependency)
@@ -93,7 +93,7 @@ shadowJar {
 }
 ```
 
-**Gradle Shadow** (Kotlin DSL, `build.gradle.kts`) — configure the task via `tasks.shadowJar { }`
+**Gradle Shadow** (Kotlin DSL, `build.gradle.kts`) - configure the task via `tasks.shadowJar { }`
 with parentheses and double quotes. A bare top-level `shadowJar { }` or Groovy single quotes will
 not compile in a `.kts` file.
 ```kotlin
@@ -127,7 +127,7 @@ Metrics metrics = new Metrics(this, pluginId, "http://localhost:8020/api/v1/inge
 ## 5. Custom charts (optional)
 
 Add these after constructing `Metrics`. Each callback runs once per submission; if it
-throws, that chart is skipped — your plugin is never affected.
+throws, that chart is skipped - your plugin is never affected.
 
 ```java
 metrics.addCustomChart(new SimplePie("server_type",
@@ -152,7 +152,7 @@ the ArrowStats site first, the server owns its type and you only need to send da
 ## What gets collected
 
 Server & player count, Minecraft version, server software, online mode, plugin
-version, Java version, OS, architecture, CPU core count — plus your custom charts.
+version, Java version, OS, architecture, CPU core count - plus your custom charts.
 **Server location is derived server-side from the request IP; it is never sent by the
 client.**
 
@@ -165,4 +165,4 @@ server out of **every** ArrowStats-using plugin. It also carries `logSentData` a
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).
